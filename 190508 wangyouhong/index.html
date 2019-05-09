@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+	</head>
+	<body>
+		<div id="box" style="overflow:hidden;height:4000PX;width:900px;border: 1px solid red; border: 2px solid red;">
+			<div id="box1"  style="float: left;">
+						<p><img src="img/iphone整套.jpg"></p>
+			</div>
+						<div id="box2"  style="overflow:hidden;float: left;">
+									<p><img src="img/iphone整套.jpg"></p>
+						
+		</div>
+
+		</div>
+
+		
+			<script>
+			var speed=20;
+			var box2=document.getElementById("box2");
+			var box1=document.getElementById("box1");
+			var box=document.getElementById("box");
+
+			function MyImg1(){
+					if(box2.offsetTop-box.scrollTop<=1){
+			 				box.scrollTop-=box1.offsetHeight; 
+			 				}else{
+			 					box.scrollTop++;
+							}
+						}
+					var MyMar1=setInterval(MyImg1,speed);
+					
+					box.onmouseover=function() {clearInterval(MyMar1)};
+					
+					box.onmouseout=function(){MyMar1=setInterval(MyImg1,speed)};
+		
+				
+		</script>
+
+	</body>
+</html>
