@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+				*{
+		 	padding: 0;
+		 	margin: 0;
+			}
+			
+			li{
+			 list-style: none;
+			 float:left;
+			 cursor: pointer;
+			 margin-left: 180px;
+		 	border: 1px solid red;
+			}
+			#tabCon {
+		 	clear: both;
+			}
+			#tabCon div {
+			 display:none;
+			}
+			#tabCon div.fdiv {
+			 display:block;
+			}
+		
+			.fdiv p{
+				text-align: center;
+				line-height: 40px;
+			}
+				</style>
+				<body>
+			<div id="tanContainer">
+		 	<div id="tab">
+			 <ul>
+		 	 <li class="fli">公告</li>
+		  	<li>规则</li>
+		  	<li>论坛</li>
+		  	<li>安全</li>
+		 	 <li>工益</li>
+		 	</ul>
+			 </div>
+			 <div id="tabCon">
+			<div class="fdiv">
+		 				<p>数据七夕：金牛爱送玫瑰</p>
+						<p>10万家店60万新品</p>
+						<p>阿里打造“互联网监管”</p>
+						<p>全球最大网上时装周</p>
+		 	</div>
+		 	<div>
+		 				<p>“全额返现”要管控啦</p>
+						<p>炒信规则调整意见反馈</p>
+						<p>淘宝新规发布汇总（7月）</p>
+						<p>质量相关规则近期变更</p>
+		 	</div>
+		 	<div>
+		 				<p>接次文件，毁了一家店</p>
+						<p>新版阿里110上线了</p>
+						<p>账号安全神器阿里钱盾</p>
+						<p>卖家学违禁避免被处罚</p>
+			 </div>
+		 	<div><p>第四</p></div>
+		 	 <div><p>第五</p></div>
+			</div>
+			</div>
+			</body>
+			<script>
+			var tabs=document.getElementById("tab").getElementsByTagName("li");
+			var divs=document.getElementById("tabCon").getElementsByTagName("div");
+		 
+			for(var i=0;i<tabs.length;i++){
+			 tabs[i].onclick=function(){change(this);}
+			}
+		 
+			function change(obj){
+			for(var i=0;i<tabs.length;i++){
+		 	if(tabs[i]==obj){
+		 	tabs[i].className="fli";
+		 	divs[i].className="fdiv";
+			}else{
+			 tabs[i].className="";
+		 	divs[i].className="";
+		 			}
+		 		}
+			} 
+</script>
+	
+</html>
